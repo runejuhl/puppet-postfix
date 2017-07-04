@@ -50,8 +50,8 @@ class postfix::params {
         }
         'Debian': {
           $daemon_directory = $::lsbdistcodename ? {
-            /(wheezy|jessie)/ => '/usr/lib/postfix',
-            default           => '/usr/lib/postfix/sbin',
+            /(wheezy|jessie|stretch)/ => '/usr/lib/postfix',
+            default                   => '/usr/lib/postfix/sbin',
           }
         }
         default: {
